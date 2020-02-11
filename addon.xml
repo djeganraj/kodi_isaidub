@@ -17,4 +17,10 @@
         <summary>Watch Tamil movies</summary>
         <description>This XBMC plugin allows to stream Tamil movies from isaidub.net</description>
     </extension>
+    <extension point="xbmc.addon.repository"
+              name="Github Add-on Repository">
+    <info compressed="true">https://github.com/djeganraj/kodi_isaidub/blob/master/addon.xml</info>
+    <checksum>https://github.com/djeganraj/kodi_isaidub/blob/master/addon.xml.md5</checksum>
+    <datadir zip="true">https://github.com/djeganraj/kodi_isaidub</datadir>
+  </extension>
 </addon>

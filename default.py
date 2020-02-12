@@ -101,7 +101,7 @@ def get_movies_and_music_videos_helper(name, url, language, mode, page):
     imgRegex = '<img src="(.+?).gif" alt='
     pagenumRegex = '<a href="(.+?)" title="(.+?)">(.+?)</a> '
     currentpageRegex= '<span class="pagination_current">(.+?)</span> '
-    if 'collections' in url:
+    if 'collections' in url or any(str.isdigit(c) for c in url):
         nextpageRegex='<a href="(.+?)" class="pagination_next"></a>'
     else:
         nextpageRegex='> <a href="(.+?)" class="pagination_next"></a>'

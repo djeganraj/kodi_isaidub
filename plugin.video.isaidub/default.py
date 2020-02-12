@@ -46,7 +46,7 @@ def main_categories(name, url, language, mode):
     #addDir('Tamil Dubbed Collections', '', 7, '', '')
     addDir('Tamil Yearly Dubbed Movies', '', 9,'', '')
     addDir('Tamil Dubbed Collections', BASE_URL+'/tamil/tamil-dubbed-movies-collections.html', 1, '')
-    addDir('Tamil Genres Dubbed Movies', '', 10, '', '')
+    addDir('Tamil Genres Dubbed Movies', '', 14, '', '')
     #addDir('Tamil HD Dubbed Movies', '', 7, '', '')
     #addDir('Hollywood Movies in (English)', BASE_URL+'/tamil/hollywood-movies-in-english.html', 1, '')
     addDir('Addon Settings', '', 12, img_path + 'settings.png', '')
@@ -501,11 +501,14 @@ def show_list(name, b_url, language, mode):
         for attr_value in values:
             if (attr_value != None):
                 addDir('Tamil '+attr_value+' Year Movies', BASE_URL+'tamil-'+str(attr_value)+'-dubbed-movies.html', 1, '')
-    elif (mode == 10):
+    elif (mode == 14):
         #postData = b_url + '&organize=Cast'
         genre_name = ['Horror','Action', 'Thriller', 'Crime', 'Mystery']
         for k in genre_name:
             addDir('Tamil '+k+' Dubbed Movies', BASE_URL+'tamil-'+k.lower()+'-dubbed-movies.html', 1, '')
+    elif (mode == 10):
+        #postData = b_url + '&organize=Cast'
+        addDir(name, b_url, 3, '')
         #values = JSONInterface.get_actor_list(language)
     elif (mode == 11):
         #postData = b_url + '&organize=Cast'
@@ -888,8 +891,9 @@ function_map[7] = inner_categories
 function_map[9] = show_list
 function_map[10] = show_list
 function_map[11] = show_list
-function_map[12] = display_setting
+function_map[12] = show_list
 function_map[13] = show_list
+function_map[14] = show_list
 """
 function_map[0] = main_categories
 function_map[1] = get_movies_and_music_videos
